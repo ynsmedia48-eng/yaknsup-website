@@ -435,18 +435,64 @@ body::after {
   to   { clip-path: inset(0 0 0 0%); opacity: 1; }
 }
 
-/* ─── MOBILE ─────────────────────────────── */
+/* ─── MOBILE (mobile-first stacked layout) ─── */
 @media (max-width: 700px) {
-  html, body { overflow-y: auto; }
-  .split { flex-direction: column; height: auto; min-height: 100vh; }
-  .side { flex: none !important; height: 50vh; min-height: 300px; }
+  html, body { overflow: visible; height: auto; }
+
+  /* Logo scrolls with the page instead of floating over content */
+  .center-logo { position: absolute; top: 26px; }
+  .center-logo img { height: 34px; }
+
+  .split { flex-direction: column; height: auto; min-height: 0; }
+
+  /* Each panel grows to fit its content and stacks it in normal flow */
+  .side {
+    flex: none !important;
+    height: auto;
+    min-height: 86vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 92px 26px 62px;
+  }
   .side-az, .side-tx { animation: none; clip-path: none; opacity: 1; }
-  .side-reveal { opacity: 1; transform: none; pointer-events: auto; }
-  .side-name { font-size: clamp(44px,10vw,64px); }
-  .side-badge { top: 24px; }
+
+  /* Badge: in flow at the top of the stack (was absolute) */
+  .side-badge {
+    position: relative;
+    top: auto; left: auto; transform: none;
+    animation: none;
+    margin-bottom: 20px;
+  }
+
+  /* Giant state name: in flow, sized down, sits above the script name */
+  .side-big-state {
+    position: relative;
+    top: auto; left: auto; right: auto; transform: none;
+    animation: none;
+    font-size: clamp(40px, 13vw, 66px);
+    margin-bottom: 2px;
+  }
+  .side:hover .side-big-state { transform: none; }
+
+  /* Content: normal flow, no absolute overlap */
+  .side-content {
+    position: relative;
+    inset: auto;
+    padding: 0;
+    justify-content: center;
+  }
+  .side-name { font-size: clamp(40px, 12vw, 58px); }
+  .side:hover .side-name { transform: none; }
+  .side-loc { margin-top: 12px; margin-bottom: 22px; }
+
+  /* CTA + description always visible (no hover on touch) */
+  .side-reveal { opacity: 1; transform: none; pointer-events: auto; max-width: 320px; }
+  .side-desc { font-size: 14px; }
+
   .pick-hint { display: none; }
-  .water-shimmer { height: 60px; }
-  .center-logo img { height: 36px; }
+  .water-shimmer { display: none; }
 }
 
 /* ─── :has() FALLBACK (Safari < 15.4) ─────── */

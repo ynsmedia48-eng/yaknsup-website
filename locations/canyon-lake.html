@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canyon Lake Marina, Arizona – Kayak & SUP Rentals | Yak N Sup</title>
+<meta name="description" content="Kayak and paddleboard rentals at Canyon Lake Marina, AZ — a 950-acre reservoir carved into the Superstition Mountains. 45 minutes east of Phoenix. Free parking. Book online.">
+<meta property="og:title" content="Canyon Lake Marina, Arizona – Yak N Sup">
+<meta property="og:description" content="Rent a kayak or paddleboard and paddle through sheer canyon walls on Canyon Lake — one of Arizona's best-kept secrets. 45 min from Phoenix.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://yaknsup.com/images/location-az.jpg">
+<link rel="canonical" href="https://yaknsup.com/locations/canyon-lake.html">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<style>
+.loc-hero { margin-top:72px; position:relative; height:520px; overflow:hidden; }
+.loc-hero img { width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block; transition:transform 6s ease; }
+.loc-hero:hover img { transform:scale(1.04); }
+.loc-hero-overlay { position:absolute; inset:0; background:linear-gradient(to bottom, rgba(10,20,30,0.2) 0%, rgba(10,20,30,0.65) 100%); }
+.loc-hero-content { position:absolute; bottom:0; left:0; right:0; padding:48px; color:white; }
+.loc-hero-content .state-pill { display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.25); padding:6px 16px; border-radius:100px; font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:16px; }
+.loc-hero-content h1 { font-family:'Sunday Romantic', serif; font-size:clamp(44px,7vw,80px); line-height:1; margin-bottom:12px; }
+.loc-hero-content p { font-size:18px; opacity:0.88; max-width:580px; }
+
+.loc-info-bar { background:var(--dark-warm); background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("../images/location-az.jpg"); background-size:cover; background-position:center 60%; color:white; padding:0 48px; }
+.loc-info-bar-inner { display:flex; gap:0; max-width:1100px; margin:0 auto; flex-wrap:wrap; }
+.info-bar-item { padding:20px 32px 20px 0; border-right:1px solid rgba(255,255,255,0.1); margin-right:32px; display:flex; align-items:center; gap:12px; flex-shrink:0; }
+.info-bar-item:last-child { border:none; }
+.info-bar-icon { font-size:20px; }
+.info-bar-label { font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.45); }
+.info-bar-val { font-size:14px; font-weight:600; color:white; }
+
+.loc-main { display:grid; grid-template-columns:1.4fr 1fr; gap:64px; max-width:1100px; margin:0 auto; }
+.loc-about h2 { font-size:clamp(32px,4vw,44px); margin-bottom:16px; }
+.loc-about p { font-size:15px; color:var(--mid); line-height:1.8; margin-bottom:16px; }
+.loc-highlights { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:28px 0 36px; }
+.highlight { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px 16px; }
+.highlight-icon { font-size:24px; margin-bottom:8px; }
+.highlight h4 { font-family:'Sunday Romantic', serif; font-size:16px; margin-bottom:4px; }
+.highlight p { font-size:12px; color:var(--mid); line-height:1.5; }
+.loc-sidebar { }
+.info-card { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px; margin-bottom:20px; }
+.info-card h4 { font-family:'Sunday Romantic', serif; font-size:20px; margin-bottom:16px; }
+.info-row { display:flex; align-items:flex-start; gap:10px; padding:10px 0; border-bottom:1px solid var(--border); font-size:14px; }
+.info-row:last-child { border:none; }
+.info-row-icon { font-size:16px; flex-shrink:0; margin-top:1px; }
+.info-row-content { flex:1; color:var(--mid); }
+.info-row-content strong { color:var(--deep-blue); }
+.book-card { background:var(--orange); border-radius:20px; padding:28px; text-align:center; color:white; }
+.book-card h4 { font-family:'Sunday Romantic', serif; font-size:22px; margin-bottom:8px; color:white; }
+.book-card p { font-size:14px; opacity:0.85; margin-bottom:20px; }
+.book-card .btn-white { display:block; background:white; color:var(--orange); padding:14px; border-radius:100px; font-weight:700; font-size:15px; text-decoration:none; transition:all 0.2s; }
+.book-card .btn-white:hover { background:var(--cream); }
+.book-card .btn-outline-white-sm { display:block; margin-top:10px; color:rgba(255,255,255,0.85); font-size:13px; text-decoration:none; }
+.book-card .btn-outline-white-sm:hover { color:white; text-decoration:underline; }
+
+.map-section { background:var(--cream); }
+.map-wrap { max-width:1100px; margin:0 auto; border-radius:20px; overflow:hidden; border:1px solid var(--border); height:400px; background:var(--card); display:flex; align-items:center; justify-content:center; flex-direction:column; gap:12px; }
+.map-placeholder-icon { font-size:48px; }
+.map-wrap p { font-size:15px; color:var(--mid); margin-bottom:12px; }
+
+.gallery-section { background:white; }
+.gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:1100px; margin:0 auto; }
+.gallery-img { border-radius:16px; overflow:hidden; aspect-ratio:4/3; }
+.gallery-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s; }
+.gallery-img:hover img { transform:scale(1.05); }
+.gallery-img-bg { width:100%; height:100%; }
+
+.what-to-bring { background:var(--cream); }
+.bring-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; max-width:1000px; margin:0 auto; }
+.bring-item { background:white; border-radius:16px; padding:24px 20px; border:1px solid var(--border); text-align:center; }
+.bring-icon { font-size:32px; margin-bottom:10px; }
+.bring-item h4 { font-family:'Sunday Romantic', serif; font-size:16px; margin-bottom:6px; }
+.bring-item p { font-size:12px; color:var(--mid); }
+
+@media (max-width:960px) {
+  .loc-hero-content { padding:32px 20px; }
+  .loc-info-bar { padding:0 20px; }
+  .info-bar-item { padding:16px 20px 16px 0; margin-right:20px; }
+  .loc-main { grid-template-columns:1fr; gap:32px; }
+  .gallery-grid { grid-template-columns:repeat(2,1fr); }
+  .bring-grid { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:600px) {
+  .loc-highlights { grid-template-columns:1fr; }
+  .gallery-grid { grid-template-columns:1fr 1fr; }
+  .bring-grid { grid-template-columns:1fr 1fr; }
+}
+@font-face { font-family: 'Sunday Romantic'; src: url('../fonts/SundayRomantic.otf') format('opentype'); font-weight: normal; font-style: normal; font-display: swap; }
+/* Blue accents */
+.info-bar-item { border-right: 1px solid rgba(138,180,198,0.25) !important; }
+.info-bar-label { color: rgba(255,255,255,0.6) !important; }
+.info-card { border-left: 4px solid var(--deep-blue) !important; }
+.info-card h4 { color: var(--deep-blue) !important; }
+.info-row-icon { color: var(--heritage) !important; }
+.info-row-icon svg { stroke: var(--heritage) !important; }
+.loc-body h3 { color: var(--deep-blue) !important; }
+.highlight { border-top: 2px solid var(--sky) !important; }
+.highlight h4 { color: var(--deep-blue) !important; }
+.bring-item { border-top: 2px solid var(--sky) !important; }
+.bring-item h4 { color: var(--deep-blue) !important; }
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" id="svg-sprite" style="display:none;position:absolute;" aria-hidden="true">
+<defs>
+<!-- Location / Map pin -->
+<symbol id="ic-location" viewBox="0 0 24 24"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Clock / Hours -->
+<symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><polyline points="12 7 12 12 15.5 15" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Calendar -->
+<symbol id="ic-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="1.8"/><line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Phone -->
+<symbol id="ic-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="11" y1="18" x2="13" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Email / Envelope -->
+<symbol id="ic-email" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><polyline points="2,4 12,13 22,4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Kayak paddle (double-blade) -->
+<symbol id="ic-paddle" viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 6.5 Q12 3 15.5 6.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 17.5 Q12 21 15.5 17.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Kayak (side view) -->
+<symbol id="ic-kayak" viewBox="0 0 24 24"><path d="M3 13 Q12 8 21 13 Q12 15 3 13Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="13" x2="12" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="9.5" y1="9" x2="14.5" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- SUP / Paddleboard person -->
+<symbol id="ic-sup" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7.5" x2="12" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 11l-3 3M15 11l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 20 Q12 17 20 20" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Life jacket / PFD -->
+<symbol id="ic-vest" viewBox="0 0 24 24"><path d="M12 3L8 7V20H16V7L12 3Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="3" x2="12" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8 9H5C4 9 3 10 3 11V20H8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9H19C20 9 21 10 21 11V20H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Group / People -->
+<symbol id="ic-group" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17" cy="8" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M21 21v-2a3.5 3.5 0 0 0-2.5-3.4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Family -->
+<symbol id="ic-family" viewBox="0 0 24 24"><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="16" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="16" r="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h2M21 21v-2a4 4 0 0 0-4-4h-2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><line x1="12" y1="18" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Sun / Sunrise -->
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="2" x2="12" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="2" y1="12" x2="4" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Moon -->
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Water waves -->
+<symbol id="ic-water" viewBox="0 0 24 24"><path d="M2 12 Q5.5 9 9 12 Q12.5 15 16 12 Q19.5 9 22 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M2 17 Q5.5 14 9 17 Q12.5 20 16 17 Q19.5 14 22 17" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.5"/></symbol>
+<!-- Fish -->
+<symbol id="ic-fish" viewBox="0 0 24 24"><path d="M6 12C6 12 8 7 14 7C18.5 7 21 9.5 21 12C21 14.5 18.5 17 14 17C8 17 6 12 6 12Z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M6 12L2 8M6 12L2 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="10" r="1" fill="currentColor"/></symbol>
+<!-- Fishing rod -->
+<symbol id="ic-fishing" viewBox="0 0 24 24"><line x1="4" y1="20" x2="20" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M20 4 Q22 8 18 10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17.5" cy="11" r="1.5" stroke="currentColor" stroke-width="1.5" fill="none"/></symbol>
+<!-- Map / Compass -->
+<symbol id="ic-map" viewBox="0 0 24 24"><polygon points="3,6 9,3 15,6 21,3 21,18 15,21 9,18 3,21" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="9" y1="3" x2="9" y2="18" stroke="currentColor" stroke-width="1.8"/><line x1="15" y1="6" x2="15" y2="21" stroke="currentColor" stroke-width="1.8"/></symbol>
+<!-- Parking P -->
+<symbol id="ic-parking" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M9 18V6h5a3 3 0 0 1 0 6H9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<!-- Gift card / Gift -->
+<symbol id="ic-gift" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7" x2="12" y2="21" stroke="currentColor" stroke-width="1.8"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Safety / Shield -->
+<symbol id="ic-safety" viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5.25 3.5 10.15 8 11.36C16.5 22.15 20 17.25 20 12V6L12 2Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><polyline points="9,12 11,14 15,10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Check circle -->
+<symbol id="ic-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 12.5l3 3 5-5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- X / Cross -->
+<symbol id="ic-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Star -->
+<symbol id="ic-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Camera / Instagram -->
+<symbol id="ic-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="13" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Music note / TikTok -->
+<symbol id="ic-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Share / Facebook -->
+<symbol id="ic-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- YouTube -->
+<symbol id="ic-youtube" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="currentColor" stroke-width="1.8" fill="none"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Arrow right -->
+<symbol id="ic-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><polyline points="12,5 19,12 12,19" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Plus (FAQ open) -->
+<symbol id="ic-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Gear / Quality -->
+<symbol id="ic-gear" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 5.5 Q12 2 15.5 5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 18.5 Q12 22 15.5 18.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Marker / pin (alternate) -->
+<symbol id="ic-marker" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 2C7.58 2 4 5.58 4 10c0 6 8 12 8 12s8-6 8-12c0-4.42-3.58-8-8-8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Thermometer / Temperature -->
+<symbol id="ic-temp" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- City / Building -->
+<symbol id="ic-city" viewBox="0 0 24 24"><rect x="3" y="9" width="13" height="13" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9V6l5-2v15H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="13" x2="9" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="7" y1="17" x2="9" y2="17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="11" y1="13" x2="13" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Tools / Coordinator -->
+<symbol id="ic-tools" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs>
+</svg>
+
+
+<nav id="mainNav">
+  <a href="../index.html" class="nav-logo" style="position:relative;display:inline-block;">
+    <img src="../images/logo-nav-black.png" alt="Yak N Sup" class="nav-logo-img" style="height:46px;width:auto;display:block;mix-blend-mode:multiply;">
+  </a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <a href="../index.html#locations">Locations</a>
+      <div class="dropdown-menu">
+        <a href="canyon-lake.html">Canyon Lake Marina — AZ</a>
+        <div class="dropdown-divider"></div>
+        <a href="hidden-cove.html">Hidden Cove Marina — TX</a>
+      </div>
+    </li>
+    <li><a href="../rentals.html">Rentals</a></li>
+    <li class="nav-dropdown">
+      <a href="../experiences.html">Experiences</a>
+      <div class="dropdown-menu">
+        <a href="../experiences.html#guided">Guided Canyon Tours</a>
+        <a href="../experiences.html#moonlight">Full Moon Paddle</a>
+        <a href="../experiences.html#sunset">Sunset Paddle</a>
+        <div class="dropdown-divider"></div>
+        <a href="../experiences.html">Full Calendar →</a>
+      </div>
+    </li>
+    <li><a href="../groups.html">Groups</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../faq.html">FAQs</a></li>
+    <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-book">Book Now</a>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="canyon-lake.html">Canyon Lake Marina, AZ</a>
+  <a href="../rentals.html">Rentals &amp; Pricing</a>
+  <a href="../experiences.html">Experiences</a>
+  <a href="../groups.html">For Groups</a>
+  <a href="../about.html">About Us</a>
+  <a href="../faq.html">FAQs</a>
+  <a href="../gift-cards.html">Gift Cards</a>
+  <a href="../contact.html">Contact</a>
+  <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="m-book">Book Now</a>
+</div>
+
+<!-- HERO -->
+<div class="loc-hero">
+  <img src="../images/location-az.jpg" alt="Canyon Lake Marina Arizona — kayaks on dock with canyon walls">
+  <div class="loc-hero-overlay"></div>
+  <div class="loc-hero-content">
+    <div class="state-pill">Arizona</div>
+    <h1>Canyon Lake Marina</h1>
+    <p>A 950-acre reservoir carved into the Superstition Mountains. Canyon walls rise straight out of the water, the scenery is genuinely wild, and most people in Phoenix have no idea it exists.</p>
+  </div>
+</div>
+
+<!-- INFO BAR -->
+<div class="loc-info-bar">
+  <div class="loc-info-bar-inner">
+    <div class="info-bar-item">
+      <span class="info-bar-icon"><svg style="width:20px;height:20px;stroke:rgba(255,255,255,0.85);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-location"/></svg></span>
+      <div><div class="info-bar-label">Address</div><div class="info-bar-val">16802 AZ-88, Tortilla Flat, AZ</div></div>
+    </div>
+    <div class="info-bar-item">
+      <span class="info-bar-icon"><svg style="width:20px;height:20px;stroke:rgba(255,255,255,0.85);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-clock"/></svg></span>
+      <div><div class="info-bar-label">Day Rentals</div><div class="info-bar-val">8:00 AM – 5:30 PM Daily</div></div>
+    </div>
+    <div class="info-bar-item">
+      <span class="info-bar-icon"><svg style="width:20px;height:20px;stroke:rgba(255,255,255,0.85);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-map"/></svg></span>
+      <div><div class="info-bar-label">Guided Tours</div><div class="info-bar-val">10:30 AM – 1:00 PM Daily</div></div>
+    </div>
+    <div class="info-bar-item">
+      <span class="info-bar-icon"><svg style="width:20px;height:20px;stroke:rgba(255,255,255,0.85);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-phone"/></svg></span>
+      <div><div class="info-bar-label">Contact</div><div class="info-bar-val">Text (480) 420-8144</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<section style="background:white;">
+  <div class="loc-main">
+    <div class="loc-about">
+      <span class="section-tag">About This Location</span>
+      <h2>Arizona's Best-Kept Secret</h2>
+      <p>Canyon Lake sits inside the Superstition Wilderness — a 950-acre reservoir hemmed in by sheer desert canyon walls that rise straight out of the water. It's one of those places that stops people mid-stroke. You look up, you look around, and you just kind of forget you were ever stressed about anything.</p>
+      <p>We launch out of Canyon Lake Marina, the main hub on the lake. From there you can hug the canyon walls, drift into quiet coves, watch for bighorn sheep on the ridgelines, and on guided tours, reach corners of the lake most people never find on their own.</p>
+      <p><strong>Heads up:</strong> cell service is gone before you reach the marina. Book online in advance, screenshot your directions, and arrive ready to have a great time.</p>
+      <div class="loc-highlights">
+        <div class="highlight"><div class="highlight-icon" style="font-size:24px;margin-bottom:8px;"><svg style="width:26px;height:26px;stroke:var(--orange);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-location"/></svg></div><h4>Superstition Mountains</h4><p>Sheer canyon walls on all sides — the scenery earns its reputation.</p></div>
+        <div class="highlight"><div class="highlight-icon" style="font-size:24px;margin-bottom:8px;"><svg style="width:26px;height:26px;stroke:var(--orange);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-star"/></svg></div><h4>Real Wildlife</h4><p>Bighorn sheep, bald eagles, great blue herons, and deer on the regular.</p></div>
+        <div class="highlight"><div class="highlight-icon" style="font-size:24px;margin-bottom:8px;"><svg style="width:26px;height:26px;stroke:var(--orange);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-sun"/></svg></div><h4>Sweet Spot: Oct – May</h4><p>Temps are perfect. Summer works too — hit the water early and beat the heat.</p></div>
+        <div class="highlight"><div class="highlight-icon" style="font-size:24px;margin-bottom:8px;"><svg style="width:26px;height:26px;stroke:var(--orange);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-fish"/></svg></div><h4>Good Fishing Too</h4><p>Bass, catfish, crappie, and carp. Bring a rod if that's your thing.</p></div>
+      </div>
+      <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-primary">Book Canyon Lake Now</a>
+    </div>
+    <div class="loc-sidebar">
+      <div class="info-card">
+        <h4>Location Details</h4>
+        <div class="info-row"><svg style="width:16px;height:16px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px;" aria-hidden="true"><use href="#ic-location"/></svg><div class="info-row-content"><strong>16802 AZ-88</strong><br>Tortilla Flat, AZ 85190</div></div>
+        <div class="info-row"><svg style="width:16px;height:16px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px;" aria-hidden="true"><use href="#ic-clock"/></svg><div class="info-row-content"><strong>Day Rentals</strong><br>8:00 AM – 5:30 PM, 7 days/week</div></div>
+        <div class="info-row"><span class="info-row-icon"><svg style="width:16px;height:16px;stroke:var(--heritage);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-map"/></svg></span><div class="info-row-content"><strong>Guided Tours</strong><br>10:30 AM – 1:00 PM, daily</div></div>
+        <div class="info-row"><svg style="width:16px;height:16px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px;" aria-hidden="true"><use href="#ic-clock"/></svg><div class="info-row-content"><strong>Special Events</strong><br>5:30 PM – 9:30 PM (select dates)</div></div>
+        <div class="info-row"><svg style="width:16px;height:16px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px;" aria-hidden="true"><use href="#ic-phone"/></svg><div class="info-row-content"><strong>(480) 420-8144</strong><br>Text us — no signal at the lake, so book ahead</div></div>
+        <div class="info-row"><span class="info-row-icon"><svg style="width:16px;height:16px;stroke:var(--heritage);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-parking"/></svg></span><div class="info-row-content"><strong>Parking</strong><br>Free parking on site at Canyon Lake Marina.</div></div>
+      </div>
+      <div class="book-card">
+        <h4>Lock In Your Spot</h4>
+        <p>Book online and it's yours. Walk-ups are welcome but spots fill up — especially on weekends.</p>
+        <a href="https://fareharbor.com/yaknsup/items/" target="_blank" class="btn-white">Book Now</a>
+        <a href="../rentals.html" class="btn-outline-white-sm">View Pricing →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="center">
+    <span class="section-tag">The Scenery</span>
+    <h2>See It for Yourself</h2>
+    <p class="section-sub" style="margin:0 auto 40px;">Photos never quite capture it. But you'll get the idea.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-img"><img src="../images/hero.jpg" alt="Woman on SUP against orange canyon wall"></div>
+    <div class="gallery-img"><img src="../images/act-tours.jpg" alt="Guided group paddling down canyon"></div>
+    <div class="gallery-img"><img src="../images/act-groups.jpg" alt="Friends on paddleboards in canyon"></div>
+    <div class="gallery-img"><img src="../images/exp-sunrise.jpg" alt="Morning light in canyon slot"></div>
+    <div class="gallery-img"><img src="../images/act-sup.jpg" alt="Paddleboarding at Canyon Lake"></div>
+    <div class="gallery-img"><img src="../images/location-az.jpg" alt="Canyon Lake Marina dock with kayaks"></div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-section">
+  <div class="center">
+    <span class="section-tag">Getting Here</span>
+    <h2>Directions to Canyon Lake Marina</h2>
+    <p class="section-sub" style="margin:0 auto 40px;">About 45 minutes east of Phoenix on the Apache Trail (AZ-88). It's one of Arizona's most scenic drives — leave a few minutes early and enjoy it.</p>
+  </div>
+  <div class="map-wrap">
+    <div class="map-placeholder-icon"><svg style="width:40px;height:40px;stroke:var(--deep-blue);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-map"/></svg></div>
+    <p>Interactive map — Google Maps embed goes here</p>
+    <a href="https://maps.google.com/?q=Canyon+Lake+Marina+Arizona" target="_blank" class="btn-primary">Open in Google Maps</a>
+  </div>
+  <div style="max-width:1100px;margin:32px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+    <div style="background:white;border:1px solid var(--border);border-radius:14px;padding:20px 22px;">
+      <strong style="display:block;margin-bottom:6px;"> From Phoenix</strong>
+      <span style="font-size:14px;color:var(--mid);">~45 min via US-60 E and AZ-88 (Apache Trail). Scenic road — take it slow.</span>
+    </div>
+    <div style="background:white;border:1px solid var(--border);border-radius:14px;padding:20px 22px;">
+      <strong style="display:block;margin-bottom:6px;"> From Scottsdale</strong>
+      <span style="font-size:14px;color:var(--mid);">~40 min via AZ-202 E and AZ-88. Easy drive through the East Valley.</span>
+    </div>
+    <div style="background:white;border:1px solid var(--border);border-radius:14px;padding:20px 22px;">
+      <strong style="display:block;margin-bottom:6px;">📵 No Signal Out There</strong>
+      <span style="font-size:14px;color:var(--mid);">Service drops well before the marina. Screenshot your route or go offline before you leave — seriously.</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO BRING -->
+<section class="what-to-bring">
+  <div class="center">
+    <span class="section-tag">Come Prepared</span>
+    <h2>What to Bring</h2>
+    <p class="section-sub" style="margin:0 auto 40px;">We handle the gear. Just pack these and you're good.</p>
+  </div>
+  <div class="bring-grid">
+    <div class="bring-item"><div class="bring-icon" style="font-size:28px;margin-bottom:10px;color:var(--orange);"><svg style="width:32px;height:32px;stroke:var(--orange);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-sun"/></svg></div><h4>Sunscreen</h4><p>The Arizona sun on open water hits different. Reef-safe, apply before you launch, reapply on the water.</p></div>
+    <div class="bring-item"><div class="bring-icon" style="font-size:28px;margin-bottom:10px;color:var(--orange);"><svg style="width:32px;height:32px;stroke:var(--orange);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-water"/></svg></div><h4>Water — A Lot of It</h4><p>Bring more than you think. It's hot, it's dry, and there's nothing to buy once you're on the water.</p></div>
+    <div class="bring-item"><div class="bring-icon" style="font-size:28px;margin-bottom:10px;color:var(--orange);"><svg style="width:32px;height:32px;stroke:var(--orange);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-gear"/></svg></div><h4>Water Shoes</h4><p>Strapped sandals or water shoes. Flip-flops end up in the lake — leave them in the car.</p></div>
+    <div class="bring-item"><div class="bring-icon" style="font-size:28px;margin-bottom:10px;color:var(--orange);"><svg style="width:32px;height:32px;stroke:var(--orange);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-sun"/></svg></div><h4>Sunglasses & Hat</h4><p>Polarized shades cut the glare beautifully out there. Wide brim hat — you'll thank yourself.</p></div>
+    <div class="bring-item"><div class="bring-icon" style="font-size:28px;margin-bottom:10px;color:var(--orange);"><svg style="width:32px;height:32px;stroke:var(--orange);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-safety"/></svg></div><h4>Quick-Dry Clothes</h4><p>You will get wet. Board shorts and a rash guard are ideal. Leave the jeans in the car.</p></div>
+    <div class="bring-item"><div class="bring-icon" style="font-size:28px;margin-bottom:10px;color:var(--orange);"><svg style="width:32px;height:32px;stroke:var(--orange);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-map"/></svg></div><h4>Offline Directions</h4><p>Signal dies on the way in. Screenshot the route or save it offline before you leave home.</p></div>
+    <div class="bring-item"><div class="bring-icon" style="font-size:28px;margin-bottom:10px;color:var(--orange);"><svg style="width:32px;height:32px;stroke:var(--orange);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-gift"/></svg></div><h4>Cash or Card</h4><p>We take both. Cash gets you a small discount — use code YNSCASH. Book online to skip the line entirely.</p></div>
+    <div class="bring-item"><div class="bring-icon" style="font-size:28px;margin-bottom:10px;color:var(--orange);"><svg style="width:32px;height:32px;stroke:var(--orange);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;" aria-hidden="true"><use href="#ic-paddle"/></svg></div><h4>Just Show Up</h4><p>Everything else — paddle, life jacket, safety briefing — we've got covered. You just need to get here.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="../index.html" class="footer-logo"><img src="../images/logo-nav-white.png" alt="Yak N Sup" class="footer-logo-img" style="mix-blend-mode:screen;width:200px;height:auto;display:block;margin:0 auto 14px;"></a>
+      <p>Kayak and paddleboard rentals, guided experiences, and good times on the water — Canyon Lake Marina, AZ and Hidden Cove, TX.</p>
+      <div class="newsletter"><input type="email" placeholder="Get updates & deals"><button>Subscribe</button></div>
+    </div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="../about.html">About Us</a></li><li><a href="../faq.html">FAQs</a></li><li><a href="../gift-cards.html">Gift Cards</a></li><li><a href="../contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Explore</h4><ul>
+      <li><a href="canyon-lake.html">Canyon Lake Marina, AZ</a></li>
+      <li><a href="hidden-cove.html">Hidden Cove, TX</a></li>
+      <li><a href="../rentals.html">Rentals & Pricing</a></li>
+      <li><a href="../experiences.html">Experiences</a></li>
+      <li><a href="../groups.html">For Groups</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@yaknsup.com">hello@yaknsup.com</a></li><li><a href="tel:+14804208144">(480) 420-8144</a></li><li style="margin-top:16px;font-size:13px;color:rgba(255,255,255,0.4);">16802 AZ-88<br>Tortilla Flat, AZ 85190</li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Yak N Sup. All rights reserved.</p><div class="social-links" style="display:flex;gap:16px;font-size:13px;opacity:0.75;"><a href="https://instagram.com/yaknsupaz" style="color:inherit;text-decoration:none;">Instagram</a><a href="https://tiktok.com/@yaknsupaz" style="color:inherit;text-decoration:none;">TikTok</a><a href="https://facebook.com/yaknsupaz" style="color:inherit;text-decoration:none;">Facebook</a><span style="opacity:0.5;">@yaknsupaz</span></div></div>
+</footer>
+<script>
+(function(){
+  var nav = document.getElementById('mainNav');
+  if(!nav) return;
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, {passive:true});
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ menu.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+
+<!-- FareHarbor Lightframe API -->
+<script src="https://fareharbor.com/embeds/api/v1/?autolightboxall=yes"></script>
+</body>
+</html>

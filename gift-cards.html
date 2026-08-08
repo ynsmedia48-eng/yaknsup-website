@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift Cards – Yak N Sup</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.gc-page { margin-top:72px; }
+.gc-hero { 
+  background-color:var(--dark-warm);
+  background-image: linear-gradient(rgba(0,0,0,0.58),rgba(0,0,0,0.58)), url('images/exp-social.jpg');
+  background-size:cover; background-position:center 30%;
+  color:white; padding:80px 48px; text-align:center; position:relative; overflow:hidden; }
+.gc-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 60%); }
+.gc-hero-inner { position:relative; z-index:1; max-width:600px; margin:0 auto; }
+.gc-hero h1 { font-family:'Sunday Romantic', serif; font-size:clamp(44px,7vw,80px); line-height:1; margin-bottom:16px; color:white; }
+.gc-hero p { font-size:18px; color:rgba(255,255,255,0.88); line-height:1.7; }
+.gc-hero-emoji { font-size:72px; margin-bottom:20px; display:block; }
+.gc-main { background:var(--card); padding:80px 48px; }
+.gc-layout { display:grid; grid-template-columns:1fr 1fr; gap:64px; max-width:960px; margin:0 auto; align-items:start; }
+.gc-amounts h2 { font-family:'Sunday Romantic', serif; font-size:32px; margin-bottom:8px; }
+.gc-amounts p { font-size:15px; color:var(--mid); margin-bottom:32px; }
+.amount-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:24px; }
+.amount-btn { padding:20px; background:var(--card); border:2px solid var(--border); border-radius:16px; font-family:'Sunday Romantic', serif; font-size:24px; cursor:pointer; transition:all 0.2s; text-align:center; }
+.amount-btn:hover, .amount-btn.selected { border-color:var(--orange); background:var(--orange-pale); color:var(--orange); }
+.custom-amount { display:flex; gap:10px; margin-bottom:28px; }
+.custom-amount input { flex:1; padding:14px 16px; border:2px solid var(--border); border-radius:12px; font-size:16px; font-family:'Lato',sans-serif; outline:none; }
+.custom-amount input:focus { border-color:var(--orange); }
+.gc-perks { list-style:none; margin-bottom:32px; }
+.gc-perks li { padding:10px 0; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:10px; font-size:14px; color:var(--mid); }
+.gc-perks li:last-child { border:none; }
+.gc-perks li::before { content:'&#10003;'; color:var(--orange); font-weight:800; }
+.gc-form { background:var(--card); border:1px solid var(--border); border-radius:24px; padding:36px; }
+.gc-form h3 { font-family:'Sunday Romantic', serif; font-size:22px; margin-bottom:24px; }
+.form-group { margin-bottom:16px; }
+.form-group label { display:block; font-size:13px; font-weight:600; margin-bottom:6px; }
+.form-group input, .form-group textarea { width:100%; padding:12px 16px; border:1px solid var(--border); border-radius:12px; font-family:'Lato',sans-serif; font-size:14px; background:white; outline:none; transition:border 0.2s; }
+.form-group input:focus, .form-group textarea:focus { border-color:var(--orange); }
+.form-group textarea { min-height:80px; resize:vertical; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.gc-preview { background:linear-gradient(135deg, #C85A2A, #E06830, #123F6B); border-radius:16px; padding:28px; color:white; margin-bottom:20px; text-align:center; }
+.gc-preview h4 { font-family:'Sunday Romantic', serif; font-size:22px; margin-bottom:4px; }
+.gc-preview p { font-size:13px; opacity:0.8; }
+.gc-preview .gc-amount-display { font-family:'Sunday Romantic', serif; font-size:52px; line-height:1; margin:12px 0; }
+@media (max-width:960px) {
+  .gc-hero { padding:56px 20px; }
+  .gc-main { padding:56px 20px; }
+  .gc-layout { grid-template-columns:1fr; gap:32px; }
+}
+@font-face { font-family: 'Sunday Romantic'; src: url('fonts/SundayRomantic.otf') format('opentype'); font-weight: normal; font-style: normal; font-display: swap; }
+/* Blue accents */
+.gc-amounts h2 { color: var(--deep-blue) !important; }
+.amount-btn { border-color: var(--sky) !important; }
+.amount-btn:hover, .amount-btn.selected { border-color: var(--orange) !important; }
+.gc-perks li::before { color: var(--heritage) !important; }
+.gc-form h3 { color: var(--deep-blue) !important; }
+.gc-form { border-top: 3px solid var(--deep-blue) !important; }
+</style>
+</head>
+<body>
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo" style="position:relative;width:140px;height:48px;">
+    <img src="images/logo-nav-black.png" alt="Yak N Sup" class="nav-logo-img" style="width:180px;height:auto;display:block;mix-blend-mode:multiply;">
+  </a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <a href="index.html#locations">Locations</a>
+      <div class="dropdown-menu">
+        <a href="locations/canyon-lake.html">Canyon Lake Marina — AZ</a>
+        <div class="dropdown-divider"></div>
+        <a href="locations/hidden-cove.html" style="opacity:0.5;">Hidden Cove, TX — Coming Soon</a>
+      </div>
+    </li>
+    <li><a href="rentals.html">Rentals</a></li>
+    <li class="nav-dropdown">
+      <a href="experiences.html">Experiences</a>
+      <div class="dropdown-menu">
+        <a href="experiences.html#guided">Guided Canyon Tours</a>
+        <a href="experiences.html#moonlight">Full Moon Paddle</a>
+        <a href="experiences.html#sunset">Sunset Paddle</a>
+        <div class="dropdown-divider"></div>
+        <a href="experiences.html">Full Calendar →</a>
+      </div>
+    </li>
+    <li><a href="groups.html">Groups</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faq.html">FAQs</a></li>
+    <a href="book.html" class="btn-book">Book Now</a>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="locations/canyon-lake.html">Canyon Lake Marina, AZ</a>
+  <a href="rentals.html">Rentals &amp; Pricing</a>
+  <a href="experiences.html">Experiences</a>
+  <a href="groups.html">For Groups</a>
+  <a href="about.html">About Us</a>
+  <a href="faq.html">FAQs</a>
+  <a href="gift-cards.html">Gift Cards</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html" class="m-book">Book Now</a>
+</div>
+
+<div class="gc-page">
+  <div class="gc-hero">
+    <div class="gc-hero-inner">
+      
+      <h1>Give the Gift of the Water</h1>
+      <p>Yak N Sup gift cards are valid for any rental, guided experience, or season pass at both Canyon Lake Marina, AZ and Hidden Cove, TX. Perfect for any occasion — or no occasion at all.</p>
+    </div>
+  </div>
+  <div class="gc-main">
+    <div class="gc-layout">
+      <div class="gc-amounts">
+        <h2>Choose an Amount</h2>
+        <p>Gift cards never expire and can be used for any purchase on our site.</p>
+        <div class="amount-grid">
+          <div class="amount-btn" onclick="selectAmount(35,this)">$35</div>
+          <div class="amount-btn selected" onclick="selectAmount(75,this)">$75</div>
+          <div class="amount-btn" onclick="selectAmount(110,this)">$110</div>
+          <div class="amount-btn" onclick="selectAmount(150,this)">$150</div>
+        </div>
+        <div class="custom-amount">
+          <input type="number" placeholder="Custom amount" min="10" id="customAmt" oninput="updatePreview(this.value)">
+          <button class="btn-sm" onclick="selectCustom()">Set</button>
+        </div>
+        <ul class="gc-perks">
+          <li>Valid at Canyon Lake Marina, AZ and Hidden Cove, TX</li>
+          <li>Redeemable for any rental, experience, or season pass</li>
+          <li>Never expires — use it whenever</li>
+          <li>Delivered digitally by email (instant)</li>
+          <li>Physical card available — contact us to arrange</li>
+        </ul>
+        <div class="gc-preview">
+          <h4>Yak N Sup Gift Card</h4>
+          <p>Valid at all locations · Never expires</p>
+          <div class="gc-amount-display" id="gcAmountDisplay">$75</div>
+          <p>The gift of getting on the water </p>
+        </div>
+      </div>
+      <div class="gc-form">
+        <h3>Recipient & Delivery Details</h3>
+        <p style="font-size:14px;color:var(--mid);margin-bottom:20px;">We'll send the gift card to the recipient's email instantly. Add a personal message to make it special.</p>
+        <div class="form-group"><label>Your Name</label><input type="text" placeholder="From: Jane Smith"></div>
+        <div class="form-group"><label>Your Email</label><input type="email" placeholder="Your email for confirmation"></div>
+        <div class="form-row">
+          <div class="form-group"><label>Recipient Name</label><input type="text" placeholder="For: Alex"></div>
+          <div class="form-group"><label>Recipient Email</label><input type="email" placeholder="alex@email.com"></div>
+        </div>
+        <div class="form-group"><label>Personal Message (optional)</label><textarea placeholder="e.g. Happy birthday! Can't wait to paddle with you at Canyon Lake "></textarea></div>
+        <div class="form-group"><label>Send Date</label><input type="date"></div>
+        <div style="background:var(--orange-pale);border:1px solid #e8c8b8;border-radius:12px;padding:14px 16px;margin-bottom:20px;">
+          <p style="font-size:13px;color:#923510;margin:0;"> <strong>Payment:</strong> Secure checkout powered by FareHarbor. Your payment is processed safely and securely.</p>
+        </div>
+        <button class="btn-primary" style="width:100%;" onclick="alert('Redirecting to secure checkout...')">Purchase Gift Card — $<span id="btnAmount">75</span></button>
+        <p style="font-size:12px;color:var(--mid);margin-top:12px;text-align:center;">Questions? <a href="contact.html" style="color:var(--orange);">Contact us</a> — we're happy to help.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><a href="index.html" class="footer-logo"><img src="images/logo-nav-white.png" alt="Yak N Sup" class="footer-logo-img" style="mix-blend-mode:screen;width:200px;height:auto;display:block;margin:0 auto 14px;"></a><p>Kayak and paddleboard rentals, guided experiences, and good times — Canyon Lake Marina, AZ and Hidden Cove, TX.</p><div class="newsletter"><input type="email" placeholder="Get updates"><button>Subscribe</button></div></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="faq.html">FAQs</a></li><li><a href="gift-cards.html">Gift Cards</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Explore</h4><ul><li><a href="locations/canyon-lake.html">Canyon Lake Marina, AZ</a></li><li><a href="locations/hidden-cove.html">Hidden Cove, TX</a></li><li><a href="rentals.html">Rentals</a></li><li><a href="experiences.html">Experiences</a></li><li><a href="passes.html">Season Passes</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@yaknsup.com">hello@yaknsup.com</a></li><li><a href="tel:+14804208144">(480) 420-8144</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Yak N Sup. All rights reserved.</p><div class="social-links"><a href="#"></a><a href="#"></a><a href="#"></a><a href="#"></a></div></div>
+</footer>
+<script>
+let selectedAmt = 75;
+function selectAmount(amt, el) {
+  selectedAmt = amt;
+  document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+  updatePreview(amt);
+}
+function updatePreview(val) {
+  if(val) {
+    document.getElementById('gcAmountDisplay').textContent = '$' + val;
+    document.getElementById('btnAmount').textContent = val;
+  }
+}
+function selectCustom() {
+  const val = document.getElementById('customAmt').value;
+  if(val) updatePreview(val);
+}
+</script>
+<script>
+(function(){
+  var nav = document.getElementById('mainNav');
+  if(!nav) return;
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, {passive:true});
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ menu.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+<!-- FareHarbor Lightframe API -->
+<script src="https://fareharbor.com/embeds/api/v1/?autolightboxall=yes"></script>
+</body>
+</html>

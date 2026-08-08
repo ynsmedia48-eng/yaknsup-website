@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Now – Yak N Sup</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.book-page { margin-top:72px; padding:64px 48px; background:var(--cream); min-height:calc(100vh - 72px); }
+.book-layout { display:grid; grid-template-columns:1fr 1.8fr; gap:48px; max-width:1100px; margin:0 auto; }
+.book-sidebar h1 { font-family:'Sunday Romantic', serif; font-size:clamp(36px,5vw,52px); line-height:1; margin-bottom:16px; }
+.book-sidebar p { font-size:16px; color:var(--mid); margin-bottom:28px; line-height:1.75; }
+.quick-links h4 { font-family:'Sunday Romantic', serif; font-size:18px; margin-bottom:14px; }
+.quick-link { display:flex; align-items:center; gap:10px; padding:12px 16px; background:white; border:1px solid var(--border); border-radius:12px; margin-bottom:8px; text-decoration:none; color:var(--deep-blue); font-size:14px; font-weight:500; transition:all 0.15s; }
+.quick-link:hover { border-color:var(--orange); color:var(--orange); background:var(--orange-pale); }
+.quick-link span { font-size:18px; }
+.contact-note { background:white; border:1px solid var(--border); border-radius:16px; padding:20px; margin-top:20px; }
+.contact-note p { font-size:13px; color:var(--mid); margin-bottom:0; }
+.contact-note a { color:var(--orange); text-decoration:none; font-weight:600; }
+
+.fareharbor-frame { background:white; border:1px solid var(--border); border-radius:20px; overflow:hidden; min-height:600px; }
+.fh-header { background:var(--dark-warm); padding:20px 28px; display:flex; align-items:center; gap:12px; }
+.fh-header h3 { font-family:'Sunday Romantic', serif; font-size:20px; color:white; }
+.fh-header p { font-size:13px; color:rgba(255,255,255,0.6); margin-top:2px; }
+.fh-tabs { display:flex; border-bottom:1px solid var(--border); }
+.fh-tab { padding:14px 24px; font-size:14px; font-weight:600; color:var(--mid); cursor:pointer; border-bottom:2px solid transparent; transition:all 0.2s; }
+.fh-tab.active { color:var(--orange); border-bottom-color:var(--orange); }
+.fh-tab:hover { color:var(--orange); }
+.fh-body { padding:48px 40px; text-align:center; }
+.fh-icon { font-size:56px; margin-bottom:20px; }
+.fh-body h3 { font-family:'Sunday Romantic', serif; font-size:28px; margin-bottom:10px; }
+.fh-body p { font-size:15px; color:var(--mid); max-width:460px; margin:0 auto 28px; line-height:1.75; }
+.fh-placeholder-note { background:var(--orange-pale); border:1px solid #e8c8b8; border-radius:14px; padding:16px 20px; margin:28px 0; text-align:left; }
+.fh-placeholder-note p { font-size:13px; color:#923510; margin:0; }
+.fh-placeholder-note strong { font-weight:700; }
+.btn-fareharbor { display:inline-block; padding:16px 36px; background:#3a7abf; color:white; border-radius:100px; font-weight:700; font-size:16px; text-decoration:none; transition:all 0.2s; }
+.btn-fareharbor:hover { background:#2D6EA3; transform:translateY(-2px); }
+
+@media (max-width:960px) {
+  .book-page { padding:40px 20px; }
+  .book-layout { grid-template-columns:1fr; }
+}
+@font-face { font-family: 'Sunday Romantic'; src: url('fonts/SundayRomantic.otf') format('opentype'); font-weight: normal; font-style: normal; font-display: swap; }
+.section-tag {
+  font-family: 'Oswald', sans-serif; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase; font-size: 12px;
+  color: var(--orange); display: block; margin-bottom: 8px;
+}
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" id="svg-sprite" style="display:none;position:absolute;width:0;height:0;" aria-hidden="true">
+<defs>
+<!-- Location / Map pin -->
+<symbol id="ic-location" viewBox="0 0 24 24"><path d="M12 21S5 13.5 5 9a7 7 0 0 1 14 0c0 4.5-7 12-7 12z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Clock / Hours -->
+<symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><polyline points="12 7 12 12 15.5 15" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Calendar -->
+<symbol id="ic-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="1.8"/><line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Phone -->
+<symbol id="ic-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="11" y1="18" x2="13" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Email / Envelope -->
+<symbol id="ic-email" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><polyline points="2,4 12,13 22,4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Kayak paddle (double-blade) -->
+<symbol id="ic-paddle" viewBox="0 0 24 24"><line x1="12" y1="3" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 6.5 Q12 3 15.5 6.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 17.5 Q12 21 15.5 17.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Kayak (side view) -->
+<symbol id="ic-kayak" viewBox="0 0 24 24"><path d="M3 13 Q12 8 21 13 Q12 15 3 13Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="13" x2="12" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="9.5" y1="9" x2="14.5" y2="9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- SUP / Paddleboard person -->
+<symbol id="ic-sup" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7.5" x2="12" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 11l-3 3M15 11l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 20 Q12 17 20 20" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Life jacket / PFD -->
+<symbol id="ic-vest" viewBox="0 0 24 24"><path d="M12 3L8 7V20H16V7L12 3Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="12" y1="3" x2="12" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8 9H5C4 9 3 10 3 11V20H8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9H19C20 9 21 10 21 11V20H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Group / People -->
+<symbol id="ic-group" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17" cy="8" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M21 21v-2a3.5 3.5 0 0 0-2.5-3.4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Family -->
+<symbol id="ic-family" viewBox="0 0 24 24"><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="16" cy="6" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="16" r="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 21v-2a4 4 0 0 1 4-4h2M21 21v-2a4 4 0 0 0-4-4h-2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><line x1="12" y1="18" x2="12" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Sun / Sunrise -->
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="2" x2="12" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="2" y1="12" x2="4" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="20" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Moon -->
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Water waves -->
+<symbol id="ic-water" viewBox="0 0 24 24"><path d="M2 12 Q5.5 9 9 12 Q12.5 15 16 12 Q19.5 9 22 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M2 17 Q5.5 14 9 17 Q12.5 20 16 17 Q19.5 14 22 17" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.5"/></symbol>
+<!-- Fish -->
+<symbol id="ic-fish" viewBox="0 0 24 24"><path d="M6 12C6 12 8 7 14 7C18.5 7 21 9.5 21 12C21 14.5 18.5 17 14 17C8 17 6 12 6 12Z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M6 12L2 8M6 12L2 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="10" r="1" fill="currentColor"/></symbol>
+<!-- Fishing rod -->
+<symbol id="ic-fishing" viewBox="0 0 24 24"><line x1="4" y1="20" x2="20" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M20 4 Q22 8 18 10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="17.5" cy="11" r="1.5" stroke="currentColor" stroke-width="1.5" fill="none"/></symbol>
+<!-- Map / Compass -->
+<symbol id="ic-map" viewBox="0 0 24 24"><polygon points="3,6 9,3 15,6 21,3 21,18 15,21 9,18 3,21" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="9" y1="3" x2="9" y2="18" stroke="currentColor" stroke-width="1.8"/><line x1="15" y1="6" x2="15" y2="21" stroke="currentColor" stroke-width="1.8"/></symbol>
+<!-- Parking P -->
+<symbol id="ic-parking" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M9 18V6h5a3 3 0 0 1 0 6H9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<!-- Gift card / Gift -->
+<symbol id="ic-gift" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="7" x2="12" y2="21" stroke="currentColor" stroke-width="1.8"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Safety / Shield -->
+<symbol id="ic-safety" viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5.25 3.5 10.15 8 11.36C16.5 22.15 20 17.25 20 12V6L12 2Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><polyline points="9,12 11,14 15,10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Check circle -->
+<symbol id="ic-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 12.5l3 3 5-5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- X / Cross -->
+<symbol id="ic-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Star -->
+<symbol id="ic-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Camera / Instagram -->
+<symbol id="ic-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="13" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Music note / TikTok -->
+<symbol id="ic-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+<!-- Share / Facebook -->
+<symbol id="ic-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- YouTube -->
+<symbol id="ic-youtube" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="currentColor" stroke-width="1.8" fill="none"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Arrow right -->
+<symbol id="ic-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><polyline points="12,5 19,12 12,19" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- Plus (FAQ open) -->
+<symbol id="ic-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Gear / Quality -->
+<symbol id="ic-gear" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 5.5 Q12 2 15.5 5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8.5 18.5 Q12 22 15.5 18.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<!-- Marker / pin (alternate) -->
+<symbol id="ic-marker" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 2C7.58 2 4 5.58 4 10c0 6 8 12 8 12s8-6 8-12c0-4.42-3.58-8-8-8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+<!-- Thermometer / Temperature -->
+<symbol id="ic-temp" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<!-- City / Building -->
+<symbol id="ic-city" viewBox="0 0 24 24"><rect x="3" y="9" width="13" height="13" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M16 9V6l5-2v15H16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="13" x2="9" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="7" y1="17" x2="9" y2="17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="11" y1="13" x2="13" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<!-- Tools / Coordinator -->
+<symbol id="ic-tools" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs>
+</svg>
+
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo" style="position:relative;width:140px;height:48px;">
+    <img src="images/logo-nav-black.png" alt="Yak N Sup" class="nav-logo-img" style="width:180px;height:auto;display:block;mix-blend-mode:multiply;">
+  </a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <a href="index.html#locations">Locations</a>
+      <div class="dropdown-menu">
+        <a href="locations/canyon-lake.html">Canyon Lake Marina — AZ</a>
+        <div class="dropdown-divider"></div>
+        <a href="locations/hidden-cove.html" style="opacity:0.5;">Hidden Cove, TX — Coming Soon</a>
+      </div>
+    </li>
+    <li><a href="rentals.html">Rentals</a></li>
+    <li class="nav-dropdown">
+      <a href="experiences.html">Experiences</a>
+      <div class="dropdown-menu">
+        <a href="experiences.html#guided">Guided Canyon Tours</a>
+        <a href="experiences.html#moonlight">Full Moon Paddle</a>
+        <a href="experiences.html#sunset">Sunset Paddle</a>
+        <div class="dropdown-divider"></div>
+        <a href="experiences.html">Full Calendar →</a>
+      </div>
+    </li>
+    <li><a href="groups.html">Groups</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faq.html">FAQs</a></li>
+    <a href="book.html" class="btn-book">Book Now</a>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="locations/canyon-lake.html">Canyon Lake Marina, AZ</a>
+  <a href="rentals.html">Rentals &amp; Pricing</a>
+  <a href="experiences.html">Experiences</a>
+  <a href="groups.html">For Groups</a>
+  <a href="about.html">About Us</a>
+  <a href="faq.html">FAQs</a>
+  <a href="gift-cards.html">Gift Cards</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html" class="m-book">Book Now</a>
+</div>
+
+<div class="book-page">
+  <div class="book-layout">
+    <div class="book-sidebar">
+      <span class="section-tag">Online Booking</span>
+      <h1>Book Your Activity</h1>
+      <p>Select your location, activity, date, and time. Real-time availability — confirm your spot in under 2 minutes.</p>
+      <div class="quick-links">
+        <h4>Jump To:</h4>
+        <a href="#" class="quick-link" onclick="setTab('rentals')"><span><svg style="width:17px;height:17px;stroke:var(--deep-blue);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle;margin-right:8px;" aria-hidden="true"><use href="#ic-kayak"/></svg></span> Kayak & SUP Rentals</a>
+        <a href="#" class="quick-link" onclick="setTab('tours')"><span><svg style="width:17px;height:17px;stroke:var(--deep-blue);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle;margin-right:8px;" aria-hidden="true"><use href="#ic-map"/></svg></span> Guided Tours</a>
+        <a href="#" class="quick-link" onclick="setTab('events')"><span><svg style="width:17px;height:17px;stroke:var(--deep-blue);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle;margin-right:8px;" aria-hidden="true"><use href="#ic-moon"/></svg></span> Full Moon & Events</a>
+        <a href="passes.html" class="quick-link"><span><svg style="width:17px;height:17px;stroke:var(--deep-blue);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle;margin-right:8px;" aria-hidden="true"><use href="#ic-gift"/></svg></span> Buy a Season Pass</a>
+        <a href="groups.html" class="quick-link"><span><svg style="width:17px;height:17px;stroke:var(--deep-blue);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle;margin-right:8px;" aria-hidden="true"><use href="#ic-group"/></svg></span> Group Inquiry Form</a>
+      </div>
+      <div class="contact-note">
+        <p> <strong>At Canyon Lake?</strong> Cell service is spotty. <a href="tel:+14804208144">Text (480) 420-8144</a> or book in advance online.</p>
+      </div>
+    </div>
+
+    <div class="fareharbor-frame">
+      <div class="fh-header">
+        <div>
+          <h3>Yak N Sup — Online Booking</h3>
+          <p>Powered by FareHarbor</p>
+        </div>
+      </div>
+      <div class="fh-tabs">
+        <div class="fh-tab active" onclick="setTab('rentals',this)">Kayak & SUP Rentals</div>
+        <div class="fh-tab" onclick="setTab('tours',this)">Guided Tours</div>
+        <div class="fh-tab" onclick="setTab('events',this)">Events</div>
+      </div>
+      <div class="fh-body">
+        <div class="fh-icon"></div>
+        <h3>FareHarbor Booking Widget</h3>
+        <p>Your live booking calendar will appear here. Customers can select their location, activity, date, time, number of guests, and pay securely.</p>
+        <div class="fh-placeholder-note">
+          <p><strong> Developer Note:</strong> Replace this section with the FareHarbor embedded booking widget. Add the FareHarbor JS snippet and calendar embed code here. Each activity type can have its own calendar or use the unified calendar view. Contact FareHarbor support to get your embed code.</p>
+        </div>
+        <a href="https://fareharbor.com" target="_blank" class="btn-fareharbor">Connect FareHarbor →</a>
+        <p style="margin-top:20px;font-size:13px;color:var(--mid);">Questions? <a href="contact.html" style="color:var(--orange);">Contact us</a> or text <a href="tel:+14804208144" style="color:var(--orange);">(480) 420-8144</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo"><img src="images/logo-nav-white.png" alt="Yak N Sup" class="footer-logo-img" style="mix-blend-mode:screen;width:200px;height:auto;display:block;margin:0 auto 14px;"></a>
+      <p>Kayak and paddleboard rentals, guided experiences, and good times on the water.</p>
+      <div class="newsletter"><input type="email" placeholder="Get updates & deals"><button>Subscribe</button></div>
+    </div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="faq.html">FAQs</a></li><li><a href="gift-cards.html">Gift Cards</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Explore</h4><ul>
+      <li><a href="locations/canyon-lake.html">Canyon Lake Marina, AZ</a></li>
+      <li><a href="locations/hidden-cove.html">Hidden Cove, TX</a></li>
+      <li><a href="rentals.html">Rentals & Pricing</a></li>
+      <li><a href="experiences.html">Experiences</a></li>
+      <li><a href="passes.html">Season Passes</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@yaknsup.com">hello@yaknsup.com</a></li><li><a href="tel:+14804208144">(480) 420-8144</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Yak N Sup. All rights reserved.</p><div class="social-links"><a href="#"></a><a href="#"></a><a href="#"></a><a href="#"></a></div></div>
+</footer>
+<script>
+function setTab(name, el) {
+  document.querySelectorAll('.fh-tab').forEach(t => t.classList.remove('active'));
+  if (el) el.classList.add('active');
+  const labels = { rentals:'Kayak & SUP Rentals', tours:'Guided Tours', events:'Full Moon & Events' };
+  document.querySelector('.fh-body h3').textContent = (labels[name] || 'Booking') + ' — FareHarbor Widget';
+}
+</script>
+<script>
+(function(){
+  var nav = document.getElementById('mainNav');
+  if(!nav) return;
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, {passive:true});
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ menu.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+<!-- FareHarbor Lightframe API -->
+<script src="https://fareharbor.com/embeds/api/v1/?autolightboxall=yes"></script>
+</body>
+</html>

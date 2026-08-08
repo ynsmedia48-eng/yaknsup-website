@@ -556,6 +556,13 @@ footer>*{position:relative;z-index:1;}
   .exp-body { padding: 22px 22px 28px; }
 }
 </style>
+<style>
+.hero-price{position:absolute;z-index:5;top:120px;right:16px;display:flex;flex-direction:column;align-items:center;gap:2px;background:var(--orange);color:#fff;text-decoration:none;padding:8px 15px 9px;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,.32);font-family:'Oswald',sans-serif;line-height:1;transform:rotate(2deg);transition:transform .2s ease;}
+.hero-price:hover{transform:rotate(0deg) scale(1.04);}
+.hero-price span{font-size:9px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;opacity:.92;}
+.hero-price strong{font-size:24px;font-weight:700;letter-spacing:.5px;}
+@media (min-width:768px){.hero-price{top:132px;right:44px;padding:11px 20px 12px;}.hero-price span{font-size:11px;}.hero-price strong{font-size:32px;}}
+</style>
 </head>
 <body>
 <!-- LOCATION BAR -->
@@ -641,6 +648,7 @@ footer>*{position:relative;z-index:1;}
 <section class="hero">
   <img src="../images/picspicpi/488A0802.jpg" alt="Paddleboarding on Lake Lewisville at Hidden Cove Marina, Frisco Texas" class="hero-photo">
   <div class="hero-overlay"></div>
+  <a href="rentals.html" class="hero-price" aria-label="Rentals starting at $35 — see pricing"><span>Rentals starting at</span><strong>$35</strong></a>
   <div class="hero-content">
     <span class="hero-eyebrow">Hidden Cove Marina · Frisco, Texas</span>
     <h1>Lewisville Lake<br><span class="gold">Is Calling.</span></h1>
